@@ -1,0 +1,2 @@
+# Only cloud serving needs a dependency. Core app, local demo and tests use stdlib.
+gunicorn==23.0.0

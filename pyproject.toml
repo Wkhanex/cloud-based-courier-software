@@ -1,0 +1,10 @@
+[project]
+name = "couriercloud"
+version = "1.0.0"
+description = "Cloud-based courier booking, dispatch and delivery tracking in Python"
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+
+[tool.ruff]
+line-length = 120

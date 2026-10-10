@@ -1,0 +1,16 @@
+services:
+  couriercloud:
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      APP_ENV: development
+      HOST: 0.0.0.0
+      APP_USERNAME: ${APP_USERNAME:-dispatcher}
+      APP_PASSWORD: ${APP_PASSWORD:?Set APP_PASSWORD in your environment or .env}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-http://localhost:3000}
+    volumes:
+      - courier-data:/app/data
+    restart: unless-stopped
+volumes:
+  courier-data:
